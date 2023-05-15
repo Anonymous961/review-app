@@ -22,7 +22,6 @@ const Home = ({navigation}:any) => {
                     </TouchableOpacity>
                 )}
             />
-            <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
         </View>
      );
 }

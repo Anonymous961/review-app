@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Button, FlatList,TouchableOpacity} from 'react-native'
+import {StyleSheet, Text, View, FlatList,TouchableOpacity, Button} from 'react-native'
 import { globalStyles } from '../styles/global';
 import {useState} from 'react'
 
@@ -22,9 +22,7 @@ const Home = ({navigation}:any) => {
                     </TouchableOpacity>
                 )}
             />
-            {/* <Text style={globalStyles.titleText}>Home Screen</Text>
-            <Button title='About Page'onPress={()=>navigation.navigate('About')}/>
-            <Button title='Review Page'onPress={()=>navigation.navigate('Review')}/> */}
+            <Button title="Open drawer" onPress={() => navigation.openDrawer()} />
         </View>
      );
 }
@@ -33,11 +31,12 @@ export default Home;
 
 const styles=StyleSheet.create({
     review:{
-        borderWidth:1,
+        // borderWidth:1,
         borderColor:"#333",
-        borderStyle:'dashed',
+        // borderStyle:'dashed',
         padding:10,
         margin:10,
-        borderRadius:5,
+        borderRadius:10,
+        backgroundColor:'#defae6',
     }
 })

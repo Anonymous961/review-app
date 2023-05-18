@@ -9,6 +9,7 @@ import Review from "./screens/review";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import header from "./shared/header";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -55,13 +56,35 @@ function Mydrawer() {
     <Drawer.Navigator>
       <Drawer.Screen
         name="Home"
-        component={MyTabs}
-        options={{ headerShown: true }}
+        component={Home}
+        options={{
+          title: "My home",
+          headerStyle: {
+            backgroundColor: "#fc7044",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+        }}
+        // options={{ headerTitle: (props) => <Header {...props} /> }}
       />
       <Drawer.Screen
         name="About"
         component={About}
-        options={{ headerShown: true }}
+        options={{
+          title: "About",
+          headerStyle: {
+            backgroundColor: "#f4511e",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          headerTitleAlign: "center",
+        }}
+        // options={{ headerTitle: (props) => <Header {...props} /> }}
       />
     </Drawer.Navigator>
   );
@@ -92,7 +115,21 @@ export default function App() {
             options={{ headerShown: false }}
           />
           <Stack.Screen name="About" component={About} />
-          <Stack.Screen name="Review" component={Review} />
+          <Stack.Screen
+            name="Review"
+            component={Review}
+            options={{
+              title: "Review",
+              headerStyle: {
+                backgroundColor: "#f4511e",
+              },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+              headerTitleAlign: "center",
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     );

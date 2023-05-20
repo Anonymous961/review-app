@@ -3,7 +3,7 @@ const Card = (props:any) => {
     // const item=props.item;
     // console.log(item)
     return ( 
-        <View style={styles.card}>
+        <View style={[styles.card, styles.shadowProp]}>
             <View style={styles.cardContent}>
                 {props.children}
             </View>
@@ -15,17 +15,21 @@ export default Card;
 
 const styles=StyleSheet.create({
     card:{
-        borderRadius:5,
-        marginHorizontal:4,
-        marginVertical:5,
-        shadowOffset:{width:2,height:3},
-        shadowColor:'black',
-        shadowOpacity:0.3,
-        elevation:2,
-        shadowRadius:5,
-        // padding:10
+        backgroundColor: 'white',
+        borderRadius: 8,
+        paddingVertical: 30,
+        paddingHorizontal: 25,
+        width: '100%',
+        marginVertical: 10
     },
     cardContent:{
         margin:18
-    }
+    },
+    shadowProp: {
+        shadowColor: 'black',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+        elevation:2
+    },
 })

@@ -9,7 +9,6 @@ import Review from "./screens/review";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import header from "./shared/header";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
